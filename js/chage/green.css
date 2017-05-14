@@ -1,0 +1,48 @@
+*{margin:0;padding:0}
+
+li{list-style:none}
+
+img{vertical-align:top;border:none}
+
+body{
+	background-color: #a3c5a8;
+}
+.clearfix{overflow:auto;_height:1%}
+.container{
+	margin:0 auto;
+	width: 510px;
+}
+.head li{
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin:10px;
+	cursor: pointer;
+}
+
+.title li{
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #008000;
+	color:#fff;
+	float: left;
+	border: 1px solid #fff;
+}
+#green{
+	border: 2px solid green;
+	background-color: green;
+}
+
+#red{
+	border: 2px solid red;
+	background-color: red;
+}
+#black{
+	border: 2px solid black;
+	background-color: black;
+}
+.active{
+	background-color: #fff!important;
+}

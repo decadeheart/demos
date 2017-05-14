@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>百度输入法</title>
+	<style type="text/css">
+		.container{
+			margin:0 auto;
+			width: 100px;
+		}
+		#div1{
+			margin-top: 5px;
+			height: 61px;
+			width: 60px;
+			border: 1px solid #bab9ff;
+			color:#00c;
+			line-height: 20px;
+		}
+		#div1 p{
+			margin:0;
+			height: 20px;
+			font-size: 14px;
+			cursor: pointer;
+		}
+		#div1 p:hover{
+			background-color: #a6a6dc;
+		}
+		#div2{
+			border-top: 1px solid #bab9ff;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var div1 = document.getElementById('div1');
+			var btn1 = document.getElementById('btn1');
+			var div2 = document.getElementById('div2');
+			btn1.onclick = function(){
+				div1.style.display = div1.style.display=='none' ? 'block' : 'none';
+			}
+			div2.onclick = function(){
+				div1.style.display = 'none';
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<input type="button" name="type" value="输入法" id="btn1">
+		<div id="div1" style="display: none;">
+			<p>手写</p>
+			<p>拼音</p>
+			<p id="div2">关闭</p>
+		</div>
+	</div>
+</body>
+</html>

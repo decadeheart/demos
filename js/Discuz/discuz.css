@@ -1,0 +1,231 @@
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+*{box-sizing: border-box;}
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: "Microsoft YaHei";
+    font-size:14px;
+    color:#333;
+}
+h1, h2, h3, h4, h5, h6{font-weight:normal;}
+ul,ol {
+    list-style: none;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #232323;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+input, textarea {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+    overflow:hidden;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.tl {
+    text-align: left;
+}
+
+.tc {
+    text-align: center
+}
+
+.tr {
+    text-align: right;
+}
+
+.ellipse {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.inline{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+body{
+	background-color: #fffbd9;
+}
+.container{
+	width: 950px;
+	margin: 0 auto;
+	height: 300px;
+}
+.left{
+	float:left;
+	height: 584px;
+	width: 208px;
+	background-color: #fffef8;
+	border:2px solid #f7f7eb;
+	overflow: hidden;
+}
+.head{
+	width: 208px;
+	height: 26px;
+	background-color: #ea7766;
+	line-height: 26px;
+	color:#fff;
+	font-size: 12px;
+	font-family: Verdana,"宋体",sans-serif;
+	font-weight: 700;
+	padding-left: 10px;
+}
+.image img{
+	width: 182px;
+	height: 182px;
+	margin:11px;
+}
+.name{
+	text-align: center;	
+}
+/*text-align：center的作用范围，和margin:0 auoto的区别
+
+设置 块级 元素内 文本 的水平对齐方式
+
+是设置对象四边的外延边距，被称为外补丁或外边距。
+*/
+.txt{
+	font-size: 14px;
+	font-family: "宋体";
+}
+.txt img{
+	height: 15px;
+	width: 15px;
+}
+.btn1{
+	margin:11px 0;
+	text-align: center;
+
+}
+.btn1 button{
+	background-color: #fdf2df;
+	border: 1px solid #f8d89d;
+	font-size: 14px;
+	font-family: "宋体";	
+}
+button:hover{
+	cursor: pointer;
+}
+.line{
+	border-bottom:1px dashed #000; 	
+}
+.locate{
+	height: 62px;
+	width: 187px;
+	margin:13px 32px;
+}
+
+.locate a{
+	display: inline-block;
+	height: 29px;
+	width: 66px;
+	background-color: #fbecce;
+	border: 1px solid #f8d89d;
+	text-align: center;
+	color:#000;
+	text-decoration: none;
+	font-size:14px;
+	font-family: "宋体";	
+	line-height: 29px;
+}
+.locate p{
+	margin-bottom: 5px;
+}
+.info img{
+	margin: 11px;
+}
+.infolist p{
+	margin-left: 11px;
+	height: 19px;
+	line-height: 19px;
+	font-family: "Microsoft YaHei";	
+	line-height: 29px;
+}
+.topLeft{
+	float: left;
+}
+#top{
+	z-index: 999;
+	position: absolute;
+	height: 267px;
+	width: 700px;
+	background-color: #fbecce;
+	border: 1px solid #f8d89d;
+	display: none;
+}
+.hover{
+	display: block;
+}
+.message{
+	height: 60px;
+	width: 204px;
+	padding:10px 0;
+	text-align: center; 
+}
+.message img{
+	height: 15px;
+	width: 19px;
+}
+.message a{
+	margin-left: 5px;
+}
+.topRight{
+	float: right;
+	height: 260px;
+	width: 490px;
+}
+.topRight p{
+	margin-top: 11px;
+}
+.title,.details{
+	height: 200px;
+	width: 100px;
+	float: left;
+}
+.title p{
+	padding-left: 20px;
+}
+

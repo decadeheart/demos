@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>list</title>
+	<style type="text/css">
+	*{margin:0;padding:0}
+
+	li{list-style:none}
+
+	img{vertical-align:top;border:none}
+		.container{
+			margin:0 auto;
+			width: 200px;
+			margin-top: 10px;
+			border: 1px solid #c4c6c8;
+		}
+		.div1{
+			height: 30px;
+			background: #ced3d7 url(ico.gif) 180px 15px no-repeat;
+			line-height: 30px;
+			border:1px solid #fff;
+			padding-left: 5px;
+			color: #6b7980;
+			cursor:pointer;
+		}
+		.open{
+			background: #ced3d7 url(ico.gif) 180px -12px no-repeat;
+		} 
+		ul li{
+			height: 25px;
+			font-size: 12px;
+			line-height: 25px;
+			background:#e9edf2;
+			padding-left: 5px;
+		}
+		ul li:hover{
+			background-color:#f5f7f9; 
+		}
+		ul li a{
+			color: #6b7980;
+			text-decoration: none;			
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var div1 = document.getElementById('div1');
+		var div2 = document.getElementById('div2');
+		var ul1 = document.getElementById('ul1');
+		div1.onclick = function(){
+			ul1.style.display = ul1.style.display == 'none' ? 'block' : 'none';	
+			div2.style.height = div2.style.height == '32px' ? '183px' : '32px';	
+			div1.className = ul1.style.display == 'none' ? 'div1' : 'div1 open';
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="container" id="div2" style="height: 32px;">
+		<div id="div1" class="div1">播放列表...</div>
+		<ul id="ul1" style="display: none">
+			<li><a href="#">历历万乡 - 陈粒</a></li>
+			<li style="border-bottom: 1px solid #fff;"><a href="#">童话镇 - 暗杠</a></li>
+			<li><a href="#">我也可以是流浪诗人 - 好妹妹乐队</a></li>
+			<li><a href="#">夕阳下的歌 - 夏小虎</a></li>
+			<li><a href="#">少年锦时 - 赵雷</a></li>
+			<li><a href="#">七月上 - Jam</a></li>
+		</ul>
+	</div>
+</body>
+</html>
