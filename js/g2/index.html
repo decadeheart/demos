@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>简单线图</title>
+    <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+    <script src="https://a.alipayobjects.com/g/datavis/g2/2.3.2/g2.js"></script>
+  </head>
+  <body>
+    <div id="c1"></div>
+    <div id="c2"></div>
+    <script>
+      var data = [
+        {piriod: '8：00', riserate: 7.0},
+        {piriod: '8：10', riserate: 6.9},
+        {piriod: '8：20', riserate: 9.5},
+        {piriod: '8：30', riserate: 14.5},
+        {piriod: '8：40', riserate: 18.2},
+        {piriod: '8：50', riserate: 21.5},
+        {piriod: '9：00', riserate: 25.2},
+      ];
+      var chart = new G2.Chart({
+        id: 'c1',
+        forceFit: true,
+        height: 450
+      });
+      chart.source(data, {
+        piriod: {
+          alias: '时间段',
+
+        },
+        riserate: {
+          alias: '抬头率'
+        }
+      });
+      chart.line().position('piriod*riserate').size(2);
+      chart.render();
+      console.log(data);
+    </script>
+  </body>
+</html>
+<!--渲染图表用到的数据-->
+riserate：抬头率
+pictures:对应时间的图片
+data:对应的是是日期
+piriod:时间段

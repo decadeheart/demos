@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hover</title>
+	<style type="text/css">
+
+		.container{
+			width: 990px;
+			margin: 0 auto;
+		}
+		ul,li{
+			margin: 0;padding: 0;list-style: none;
+		}
+		.imgList li img{
+			width: 240px;
+			height: 160px;
+			float: left;
+		}
+		.imgList li{
+			opacity: 0.3;
+		}
+		li.current{
+			opacity: 1;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function() {
+			var oImg = document.getElementsByTagName('li');
+			console.log(oImg);
+			for(var i = 0; i < oImg.length; i ++){
+				oImg[i].onmouseover = function() {
+					this.className = 'current';
+				}
+				oImg[i].onmouseout = function() {
+					this.className = '';
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<ul class="imgList">
+			<li><img src="https://drscdn.500px.org/photo/212026481/q%3D80_m%3D2000/8a61dcb4e6a1f0971764cf08473ed733" alt=""></li>
+			<li><img src="https://drscdn.500px.org/photo/212026377/q%3D80_m%3D2000/35435c1c35629682db1090af206c20b5" alt=""></li>
+			<li><img src="https://drscdn.500px.org/photo/211978847/q%3D80_m%3D2000/757a106ecb387bd0b5aa86a4c88dbc7c" alt=""></li>
+			<li><img src="https://drscdn.500px.org/photo/211945067/q%3D80_m%3D2000/374be23509c357fe2925672f51bb67b9" alt=""></li>
+			<li><img src="https://drscdn.500px.org/photo/211869029/q%3D80_m%3D2000/be138a5449138061b3113e3461fb1432" alt=""></li>
+			<li><img src="https://drscdn.500px.org/photo/211759419/q%3D80_m%3D2000/32c9455ee672f3497a4ce736ab6f8079" alt=""></li>
+			<li><img src="https://drscdn.500px.org/photo/211757603/q%3D80_m%3D2000/3b17f4c6258ff0a10e0913e6cd132bd8" alt=""></li>
+			<li><img src="https://drscdn.500px.org/photo/211611341/q%3D80_m%3D2000/82db1f27c7901f8af27d8246d80d1156" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>

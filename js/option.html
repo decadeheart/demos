@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>简易选项卡</title>
+	<style type="text/css">
+		.head{
+			width: 500px;
+			height: 20px;
+			background-color: #000;
+			color: #fff;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+		.content{
+			width: 498px;
+			border: 1px solid #000;
+			margin: 0 auto;
+			display: none
+		}
+		ul{
+			margin: 10px;
+			padding:0 15px;
+		}
+		.head span{
+			display: inline-block;
+			height: 18px;
+			width: 50px;
+			text-align: center;
+			line-height: 18px;
+			margin: 1px;
+			cursor: pointer;
+		}
+		span.active{
+			background-color: #ccc;
+			color: #000;			
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oSpan = document.getElementsByTagName('span');
+			var oContent = document.getElementsByClassName('content');
+			console.log(oContent);
+			for(var i = 0; i < oSpan.length; i++){
+				oSpan[i].index = i;
+				oSpan[i].onclick = function(){
+				for(var j = 0; j < oContent.length; j ++){
+					oSpan[j].setAttribute('class','');
+					oContent[j].style.display = 'none';
+				}
+				this.setAttribute('class','active');
+				oContent[this.index].style.display = 'block';	
+			}
+
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="head">
+		<span class="active">暗杠</span>
+		<span >赵雷</span>
+		<span >Jam</span>
+	</div>
+	<div class="content" style="display: block;">
+		<ul>
+			<li>阿婆说</li>
+			<li>童话镇</li>
+			<li>走歌人</li>
+			<li>我们</li>
+			<li>稻草人</li>
+		</ul>
+	</div>
+	<div class="content">
+		<ul>
+			<li>成都</li>
+			<li>南方姑娘</li>
+			<li>理想</li>
+			<li>画</li>
+			<li>我们的时光</li>
+		</ul>
+	</div>
+
+	<div class="content">
+		<ul>
+			<li>七月上</li>
+			<li>梦里梦外</li>
+			<li>差三岁</li>
+			<li>南</li>
+			<li>世界之大</li>
+		</ul>
+	</div>
+</body>
+</html>

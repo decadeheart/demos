@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+    <title>Untitled</title> 
+    <style type="text/css"> 
+        .kefuchu{ width:109px;} 
+        .SS_dh1{background:url(../images/SSindex/SS_dh1.jpg) no-repeat; height:51px; width:84px; float:left} 
+        .SS_dh2{background:url(../images/SSindex/SS_dh2.jpg) no-repeat; height:51px; width:25px; float:left; display:block} 
+        .SS_dh3{background:url(../images/SSindex/SS_dh3.jpg) repeat-y; width:109px; } 
+        .SS_dh4{background:url(../images/SSindex/SS_dh4.jpg) no-repeat; height:17px; width:109px; } 
+        .SS_dh5{background:url(../images/SSindex/SS_dh5.jpg) no-repeat; height:23px; width:74px; margin-left:20px;} 
+         
+         
+        #scroll li{float:left;width:150px;} 
+        #scroll2{display:none;} 
+    </style> 
+</head> 
+
+<body> 
+<div> 
+    <ul style="width:500px;height:200px;overflow:hidden;line-height:20px;" id="scroll"> 
+        <li>脚本之家</li> 
+        <li>jb51.net</li> 
+        <li>看书了</li> 
+        <li>kanshule.com</li> 
+        <li>好好学习</li> 
+        <li>发生大幅6</li> 
+        <li>发生大幅7</li> 
+        <li>发生大幅8</li> 
+        <li>发生大幅9</li> 
+        <li>发生大幅10</li> 
+        <li>发生大幅11</li> 
+        <li>发生大幅12</li> 
+        <li>发生大幅13</li> 
+        <li>发生大幅14</li> 
+        <li>发生大幅15</li> 
+        <li>发生大幅16</li> 
+        <li>发生大幅17</li> 
+        <li>发生大幅18</li> 
+        <li>发生大幅19</li> 
+        <li>发生大幅20</li> 
+    </ul> 
+    <ul id="scroll2"></div> 
+</div> 
+<script type="text/javascript"> 
+    var Scroll=document.getElementById("scroll"); 
+    var Scroll2=document.getElementById("scroll2"); 
+    var currentTop=0,preTop=0,stoptime=0,stopscroll=false; 
+    var ScrollChild=Scroll.getElementsByTagName("li"); 
+    var ScrollHeight=Scroll.offsetHeight; 
+    function ScrollInfo(){ 
+        if(stopscroll==true) return; 
+        currentTop++; 
+        if(currentTop+1>=20){ 
+            currentTop--; 
+            stoptime++; 
+            console.log(stoptime)
+            if(stoptime==20) { 
+      currentTop=0; 
+      stoptime=0; 
+    } 
+        }else{ 
+            preTop=Scroll.scrollTop; 
+            Scroll.scrollTop = Scroll.scrollTop+2 ; 
+            if(preTop==Scroll.scrollTop){ 
+        Scroll.scrollTop=0; 
+        Scroll.scrollTop+=2; 
+     } 
+        } 
+    } 
+    function Int_Scroll(){ 
+        Scroll2.innerHTML=""; 
+        Scroll2.innerHTML=Scroll.innerHTML; 
+        Scroll.innerHTML=Scroll2.innerHTML+Scroll2.innerHTML; 
+        Scroll.onmouseover=function(){ 
+            stopscroll=true; 
+        } 
+        Scroll.onmouseout=function(){ 
+            stopscroll=false; 
+        } 
+        setInterval("ScrollInfo()",100); 
+    } 
+    window.setTimeout("Int_Scroll()",1000); 
+</script> 
+</body> 
+</html> 
+
